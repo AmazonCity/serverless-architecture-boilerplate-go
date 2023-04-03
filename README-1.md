@@ -1,4 +1,5 @@
 @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ go run mage.go deploy
+
 Error: failed to run "serverless deploy --verbose --force: exec: "serverless": executable file not found in $PATH"
 exit status 1
 
@@ -36,3 +37,133 @@ source ~/.bashrc
 This command reloads the shell configuration file and updates the PATH environment variable.
 
 Once you have completed these steps, you should be able to run the "serverless deploy" command without encountering the "executable file not found in $PATH" error.
+
+# 
+
+### @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ go run mage.go build
+
+go: downloading github.com/magefile/mage v1.11.0
+go: downloading github.com/aws/aws-lambda-go v1.13.3
+go: downloading github.com/google/uuid v1.1.1
+go: downloading github.com/aws/aws-sdk-go v1.27.2
+go: downloading github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af
+
+### @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ go run mage.go deploy
+
+Error: failed to run "serverless deploy --verbose --force: exec: "serverless": executable file not found in $PATH"
+exit status 1
+
+### @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ npm install -g serverless
+
+npm WARN deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm WARN deprecated superagent@7.1.6: Please downgrade to v7.1.5 if you need IE/ActiveXObject support OR upgrade to v8.0.0 as we no longer support IE and published an incorrect patch version (see https://github.com/visionmedia/superagent/issues/1731)
+
+added 407 packages in 29s
+
+67 packages are looking for funding
+  run `npm fund` for details
+npm notice 
+npm notice New minor version of npm available! 9.5.0 -> 9.6.3
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v9.6.3
+npm notice Run npm install -g npm@9.6.3 to update!
+npm notice 
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless --version
+
+Framework Core: 3.29.0
+Plugin: 6.2.3
+SDK: 4.3.2
+
+###@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ pwd 
+
+/workspaces/serverless-architecture-boilerplate-go
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ nano ~/.bashrc
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ source ~/.bashrc
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ go run mage.go deploy
+
+To ensure safe major version upgrades ensure "frameworkVersion" setting in service configuration (recommended setup: "frameworkVersion: ^3.29.0")
+
+
+Deploying serverless-go to stage dev (us-east-1)
+
+Excluding development dependencies for service package
+
+✖ Stack serverless-go-dev failed to deploy (2s)
+Environment: linux, node 19.7.0, framework 3.29.0, plugin 6.2.3, SDK 4.3.2
+Docs:        docs.serverless.com
+Support:     forum.serverless.com
+Bugs:        github.com/serverless/serverless/issues
+
+
+1 deprecation found: run 'serverless doctor' for more details
+Error: running "serverless deploy --verbose --force" failed with exit code 1
+exit status 1
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless doctor
+
+1 deprecation triggered in the last command:
+
+Starting with version 4.0.0, following property will be replaced:
+  "provider.iamRoleStatements" -> "provider.iam.role.statements"
+More info: https://serverless.com/framework/docs/deprecations/#PROVIDER_IAM_SETTINGS_V3
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $  serverless --org=amazoncity
+
+? No AWS credentials found, what credentials do you want to use? Local AWS Access Keys
+? Do you have an AWS account? Yes
+
+If your browser does not open automatically, please open this URL: https://console.aws.amazon.com/iam/home?region=us-east-1#/users$new?step=final&accessKey&userNames=serverless&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
+
+
+                    M? In your AWS account, create an AWS user with access keys. Then pres
+? In your AWS account, create an AWS user with access keys. Then press [Enter] to 
+continue. 
+? AWS Access Key Id: AKI************GDG
+? AWS Secret Access Key: BE4************************P2Y
+
+✔ AWS credentials saved on your machine at "~/.aws/credentials". Go there to change them at any time.
+
+? Do you want to deploy now? Yes
+
+Deploying serverless-go to stage dev (us-east-1)
+
+✔ Service deployed to stack serverless-go-dev (210s)
+
+endpoints:
+  POST - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books
+  GET - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books
+  GET - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  PUT - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  DELETE - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+functions:
+  create: serverless-go-dev-create (24 MB)
+  read: serverless-go-dev-read (24 MB)
+  read_detail: serverless-go-dev-read_detail (24 MB)
+  update: serverless-go-dev-update (24 MB)
+  delete: serverless-go-dev-delete (24 MB)
+  worker: serverless-go-dev-worker (24 MB)
+
+What next?
+Run these commands in the project directory:
+
+serverless deploy    Deploy changes
+serverless info      View deployed endpoints and resources
+serverless invoke    Invoke deployed functions
+serverless --help    Discover more commands
+
+1 deprecation found: run 'serverless doctor' for more details
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless doctor
+1 deprecation triggered in the last command:
+
+Starting with version 4.0.0, following property will be replaced:
+  "provider.iamRoleStatements" -> "provider.iam.role.statements"
+More info: https://serverless.com/framework/docs/deprecations/#PROVIDER_IAM_SETTINGS_V3
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ 
+
+
