@@ -76,7 +76,7 @@ Framework Core: 3.29.0
 Plugin: 6.2.3
 SDK: 4.3.2
 
-###@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ pwd 
+### @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ pwd 
 
 /workspaces/serverless-architecture-boilerplate-go
 
@@ -135,12 +135,19 @@ Deploying serverless-go to stage dev (us-east-1)
 ✔ Service deployed to stack serverless-go-dev (210s)
 
 endpoints:
+
   POST - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books
+  
   GET - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books
+  
   GET - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  
   PUT - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  
   DELETE - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  
 functions:
+
   create: serverless-go-dev-create (24 MB)
   read: serverless-go-dev-read (24 MB)
   read_detail: serverless-go-dev-read_detail (24 MB)
@@ -157,7 +164,9 @@ serverless invoke    Invoke deployed functions
 serverless --help    Discover more commands
 
 1 deprecation found: run 'serverless doctor' for more details
+
 @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless doctor
+
 1 deprecation triggered in the last command:
 
 Starting with version 4.0.0, following property will be replaced:
