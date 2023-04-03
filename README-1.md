@@ -147,7 +147,7 @@ endpoints:
   PUT - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
   
   DELETE - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
-  
+ ``` 
 functions:
 
   create: serverless-go-dev-create (24 MB)
@@ -156,15 +156,15 @@ functions:
   update: serverless-go-dev-update (24 MB)
   delete: serverless-go-dev-delete (24 MB)
   worker: serverless-go-dev-worker (24 MB)
-
+```
 What next?
 Run these commands in the project directory:
-
+```
 serverless deploy    Deploy changes
 serverless info      View deployed endpoints and resources
 serverless invoke    Invoke deployed functions
 serverless --help    Discover more commands
-
+```
 1 deprecation found: run 'serverless doctor' for more details
 
 @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless doctor
@@ -177,4 +177,90 @@ More info: https://serverless.com/framework/docs/deprecations/#PROVIDER_IAM_SETT
 
 @islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ 
 
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless info
+```
+service: serverless-go
+stage: dev
+region: us-east-1
+stack: serverless-go-dev
+endpoints:
+  POST - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books
+  GET - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books
+  GET - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  PUT - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+  DELETE - https://b2xktu6613.execute-api.us-east-1.amazonaws.com/dev/books/{hashkey}
+functions:
+  create: serverless-go-dev-create
+  read: serverless-go-dev-read
+  read_detail: serverless-go-dev-read_detail
+  update: serverless-go-dev-update
+  delete: serverless-go-dev-delete
+  worker: serverless-go-dev-worker
+```
 
+1 deprecation found: run 'serverless doctor' for more details
+
+@islamicity24 ➜ /workspaces/serverless-architecture-boilerplate-go (main) $ serverless --help
+
+Serverless Framework v3.29.0
+
+Usage
+serverless <command> <options>
+sls <command> <options>
+
+Get started
+Run serverless to interactively setup a project.
+Use --help-interactive to display the interactive setup help.
+
+Monitoring
+Enable performance and error monitoring with the Serverless Dashboard.
+Learn more: https://serverless.com/monitoring
+
+Plugins
+Extend the Serverless Framework with plugins.
+Explore plugins: https://serverless.com/plugins
+```
+Options
+--help / -h                     Show this message
+--version / -v                  Show version info
+--verbose                       Show verbose logs
+--debug                         Namespace of debug logs to expose (use "*" to display all)
+
+Main commands
+deploy                          Deploy a Serverless service
+deploy function                 Deploy a single function from the service
+info                            Display information about the service
+invoke                          Invoke a deployed function
+invoke local                    Invoke function locally
+logs                            Output the logs of a deployed function
+
+Other commands
+deploy list                     List deployed version of your Serverless Service
+deploy list functions           List all the deployed functions and their versions
+metrics                         Show metrics for a specific function
+remove                          Remove Serverless service and all resources
+rollback                        Rollback the Serverless service to a specific deployment
+rollback function               Rollback the function to the previous version
+test                            Run HTTP tests
+package                         Packages a Serverless service
+plugin install                  Install and add a plugin to your service
+plugin uninstall                Uninstall and remove a plugin from your service
+print                           Print your compiled and resolved config file
+config                          Configure Serverless
+config credentials              Configures a new provider profile for the Serverless Framework
+create                          Create new Serverless service
+dashboard                       Open the Serverless dashboard
+doctor                          Print status on reported deprecations triggered in the last command run
+generate-event                  Generate event
+help                            Show this help
+install                         Install a Serverless service from GitHub or a plugin from the Serverless registry
+login                           Login or sign up for Serverless
+logout                          Logout from Serverless
+output get                      Get value of dashboard deployment profile parameter
+output list                     List all dashboard deployment profile parameters
+param get                       Get value of dashboard service output
+param list                      List all dashboard deployment profile parameters
+plugin list                     Lists all available plugins
+plugin search                   Search for plugins
+slstats                         Enable or disable stats
+```
