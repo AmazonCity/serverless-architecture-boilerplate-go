@@ -123,7 +123,9 @@ If your browser does not open automatically, please open this URL: https://conso
                     M? In your AWS account, create an AWS user with access keys. Then pres
 ? In your AWS account, create an AWS user with access keys. Then press [Enter] to 
 continue. 
+
 ? AWS Access Key Id: AKI************GDG
+
 ? AWS Secret Access Key: BE4************************P2Y
 
 ✔ AWS credentials saved on your machine at "~/.aws/credentials". Go there to change them at any time.
